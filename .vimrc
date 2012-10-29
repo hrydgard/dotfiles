@@ -23,7 +23,7 @@ set smarttab
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
-set expandtab
+" no expandtab!
 
 filetype plugin on
 filetype indent on
@@ -64,3 +64,17 @@ set statusline +=%2*0x%04B\ %*          "character under cursor
 " 256 color support
 set t_Co=256
 colorscheme desert256
+
+" Tell vim to remember certain things when we exit
+"  '10  :  marks will be remembered for up to 10 previously edited files
+"  "100 :  will save up to 100 lines for each register
+"  :20  :  up to 20 lines of command-line history will be remembered
+"  %    :  saves and restores the buffer list
+"  n... :  where to save the viminfo files
+set viminfo='10,\"100,:20,%,n~/.viminfo
+
+" Let's highlight trailing spaces
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+:autocmd BufWinEnter * match ExtraWhitespace /^\s* \s*\|\s\+$/
+:autocmd BufWinLeave * call clearmatches()

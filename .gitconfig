@@ -1,3 +1,11 @@
 [user]
-	name = Henrik Rydgard
+	name = Henrik Rydgård
 	email = hrydgard@gmail.com
+[color]
+	ui = true
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	sm = submodule
