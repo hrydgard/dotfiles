@@ -63,7 +63,6 @@ set statusline +=%2*0x%04B\ %*          "character under cursor
 
 " 256 color support
 set t_Co=256
-colorscheme desert256
 
 " Tell vim to remember certain things when we exit
 "  '10  :  marks will be remembered for up to 10 previously edited files
